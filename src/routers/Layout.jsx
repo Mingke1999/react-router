@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { HashRouter, Route,Switch} from "react-router-dom"
+import { HashRouter, Route, Switch, Redirect} from "react-router-dom"
 import Links from './Links'
 
 import Home from '../views/Home'
@@ -15,11 +15,16 @@ export default class Layout extends Component {
       <HashRouter>
         <Links/>
           <Switch>
+            <Redirect from="/home" to="/"></Redirect>
             <Route  exact path="/about" component={About} ></Route>
             <Route  exact path="/" component={Home}></Route>
             <Route  exact path="/news" component={News} ></Route>
             <Route  exact path="/details/:title" component={Details} ></Route>
-            
+            <Redirect from="/query" to={{
+                pathname: "/querypass",
+                search: "?name=Hello",
+    
+              }}/>
             <Route  exact path="/querypass" component={QueryPass}></Route>
             <Route component={NotFound} ></Route>
           </Switch>
