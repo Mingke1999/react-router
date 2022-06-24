@@ -5,3 +5,4 @@ BrowseRouter
 
 Link will be rendered as <a>
 <Link to="path"> equals to <a href="#/path"> not recommend
+exact only goes the current

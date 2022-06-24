@@ -11,7 +11,7 @@ export default class Layout extends Component {
         <Links/>
         <Routes>
           <Route path="/about" element={<About/>} />
-          <Route path="/" element={<Home/>}/>
+          <Route exact path="/" element={<Home/>}/>
         </Routes>
       </HashRouter>
      
