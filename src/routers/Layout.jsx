@@ -1,18 +1,19 @@
 import React, { Component } from 'react'
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import {HashRouter, Routes, Route} from "react-router-dom"
 import Home from '../views/Home'
 import About from '../views/About'
+import Links from './Links'
 
 export default class Layout extends Component {
   render() {
     return (
-      <Router>
+      <HashRouter>
+        <Links/>
         <Routes>
           <Route path="/about" element={<About/>} />
           <Route path="/" element={<Home/>}/>
         </Routes>
-
-      </Router>
+      </HashRouter>
      
     )
   }
