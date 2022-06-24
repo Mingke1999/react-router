@@ -13,10 +13,18 @@ NavLink highlight
 activeStyle
 activeClassName
 
+method 1 (restful API)
+    1. add key
+    <Route  exact path="/details/:id" component={Details} ></Route>
+    2. passing value
+    <Link to={`/details/${ele.id}`}> {ele.title}</Link>
+    3.read value
+    <p>id={this.props.match.params.id}</p>
 
-1. add key
-<Route  exact path="/details/:id" component={Details} ></Route>
-2. passing value
-<Link to={`/details/${ele.id}`}> {ele.title}</Link>
-3.read value
-<p>id={this.props.match.params.id}</p>
+method 2 querystring
+    1. passing value in Link
+    <li><NavLink activeClassName='selected' to="/querypass?name=mingke" >QUERYSTRING</NavLink></li>
+    2. read data
+    npm install --save query-string
+      const {name} = qs.parse(this.props.location.search)
+    

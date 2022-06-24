@@ -7,6 +7,7 @@ import About from '../views/About'
 import News from "../views/News"
 import NotFound from '../views/NotFound'
 import Details from '../views/Details'
+import QueryPass from '../views/QueryPass'
 
 export default class Layout extends Component {
   render() {
@@ -18,6 +19,8 @@ export default class Layout extends Component {
             <Route  exact path="/" component={Home}></Route>
             <Route  exact path="/news" component={News} ></Route>
             <Route  exact path="/details/:title" component={Details} ></Route>
+            
+            <Route  exact path="/querypass" component={QueryPass}></Route>
             <Route component={NotFound} ></Route>
           </Switch>
       </HashRouter>
