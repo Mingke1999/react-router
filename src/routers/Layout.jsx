@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { HashRouter, Routes, Route } from "react-router-dom"
+import { HashRouter, Route} from "react-router-dom"
 import Home from '../views/Home'
 import About from '../views/About'
 import Links from './Links'
@@ -11,12 +11,10 @@ export default class Layout extends Component {
     return (
       <HashRouter>
         <Links/>
-          <Routes>
-            <Route path="/about" element={<About/>} />
-            <Route exact path="/" element={<Home/>}/>
-            <Route path="/news" element={<News/>} />
-            <Route path="*" element={<NotFound/>} />
-          </Routes>
+            <Route path="/about" component={About} ></Route>
+            <Route exact path="/" component={Home}></Route>
+            <Route path="/news" component={News} ></Route>
+            <Route path="*" component={NotFound} ></Route>
       </HashRouter>
      
     )

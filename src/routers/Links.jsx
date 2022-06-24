@@ -7,9 +7,9 @@ export default class Links extends Component {
     return (
         <div className='nav'>
             <ol>
-                <li><NavLink  to="/">Home</NavLink></li>
-                <li><NavLink  to="/about">About</NavLink></li>
-                <li><NavLink  to="/news">News</NavLink></li>
+                <li><NavLink activeClassName='selected' to="/">Home</NavLink></li>
+                <li><NavLink activeClassName='selected' to="/about">About</NavLink></li>
+                <li><NavLink activeClassName='selected' to="/news">News</NavLink></li>
             </ol>
         </div>
     )

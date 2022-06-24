@@ -1,3 +1,5 @@
+npm i react-router-dom@5.2.0
+
 HashRouter
 /#/path use anchor <a href="#/about"></a>
 BrowseRouter

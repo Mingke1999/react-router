@@ -21,8 +21,9 @@
     color: aliceblue;
 }
 
-.nav ol li a.active{
-    color: red;
+.nav ol li a.selected{
+    color: green;
 }
+
 
 
