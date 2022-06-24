@@ -11,6 +11,7 @@ export default class Links extends Component {
                 <li><NavLink activeClassName='selected' to="/about">About</NavLink></li>
                 <li><NavLink activeClassName='selected' to="/news" >News</NavLink></li>
                 <li><NavLink activeClassName='selected' to="/user" >User</NavLink></li>
+                <li><NavLink activeClassName='selected' to="/life" >LIFECYCLE</NavLink></li>
                 <li><NavLink activeClassName='selected' to="/querypass?name=mingke" >QUERYSTRING</NavLink></li>
             </ol>
         </div>

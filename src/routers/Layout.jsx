@@ -11,6 +11,7 @@ import QueryPass from '../views/QueryPass'
 import User from '../views/User'
 import Profile from '../views/UserSub/Profile'
 import History from '../views/UserSub/History'
+import LifeCycle from '../views/LifeCycle'
 
 export default class Layout extends Component {
   render() {
@@ -22,6 +23,7 @@ export default class Layout extends Component {
             <Route  exact path="/about" component={About} ></Route>
             <Route  exact path="/" component={Home}></Route>
             <Route  exact path="/news" component={News} ></Route>
+            <Route  exact path="/life" component={LifeCycle} ></Route>
             {/*<Route  exact path="/user" component={User} ></Route>*/}
             <User path="/user">
               <Redirect from="/user" to="/user/profile"></Redirect>
