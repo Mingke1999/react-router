@@ -8,6 +8,9 @@ import News from "../views/News"
 import NotFound from '../views/NotFound'
 import Details from '../views/Details'
 import QueryPass from '../views/QueryPass'
+import User from '../views/User'
+import Profile from '../views/UserSub/Profile'
+import History from '../views/UserSub/History'
 
 export default class Layout extends Component {
   render() {
@@ -19,6 +22,12 @@ export default class Layout extends Component {
             <Route  exact path="/about" component={About} ></Route>
             <Route  exact path="/" component={Home}></Route>
             <Route  exact path="/news" component={News} ></Route>
+            {/*<Route  exact path="/user" component={User} ></Route>*/}
+            <User path="/user">
+              <Redirect from="/user" to="/user/profile"></Redirect>
+              <Route path="/user/profile" component={Profile}></Route>
+              <Route path="/user/booking" component={History}></Route>
+            </User>
             <Route  exact path="/details/:title" component={Details} ></Route>
             <Redirect from="/query" to={{
                 pathname: "/querypass",
