@@ -20,3 +20,9 @@
 .nav ol li a{
     color: aliceblue;
 }
+
+.nav ol li a.active{
+    color: red;
+}
+
+

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Link} from "react-router-dom"
+import {NavLink} from "react-router-dom"
 import "./Links.css"
 
 export default class Links extends Component {
@@ -7,9 +7,9 @@ export default class Links extends Component {
     return (
         <div className='nav'>
             <ol>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/newst">News</Link></li>
+                <li><NavLink  to="/">Home</NavLink></li>
+                <li><NavLink  to="/about">About</NavLink></li>
+                <li><NavLink  to="/news">News</NavLink></li>
             </ol>
         </div>
     )
